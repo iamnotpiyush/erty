@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: white;
+
+}
+
+
+
+.topnav a {
+  float: right;
+  display: block;
+  color: red;
+  text-align: center;
+  padding: 30px 30px;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+
+
+
+
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 935px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .responsive1{
+  width:100%;
+  height:500px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+   margin:0px;
+  
+}
+.topnav a:hover{
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.topnav a:hover:after {
+  content: '';
+  position: absolute;
+  width: 98%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.topnav a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.topnav a.active {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+.topnav a.active:after {
+  content: '';
+  position: absolute;
+  width: 98%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.topnav a.active:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.responsive {
+ 
+  height:auto;
+}
+.responsive1 {
+ width:100%;
+  height:auto;
+ 
+    overflow: hidden;
+	 object-fit: cover;
+   opacity:0.6;
+}
+.head{
+border:2px solid #dbdbdb;
+height:30px;
+background-color:#dbdbdb;
+
+.hd{margin-bottom:10px;
+
+}
+
+}
+@media screen and (max-width:400px) {
+.head{display: none}
+.topnav a.active {display: none}
+
+}
+.containerr {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+a.button1{
+display:inline-block;
+padding:0.55em 3.2em;
+border:0.1em solid #FFFFFF;
+margin:0 0.3em 0.3em 0;
+border-radius:0.12em;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:300;
+color:#FFFFFF;
+text-align:center;
+transition: all 0.2s;
+}
+a.button1:hover{
+color:#000000;
+background-color:#FFFFFF;
+}
+
+.card {
+  box-shadow: 10px 15px 10px 12px rgba(0, 0, 0, 0.1);
+  max-width: 21.33%;
+  float:left;
+  margin: 15px;
+  text-align: center;
+  font-family: arial;
+  margin-top:30px;	
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 35%;
+  font-size: 18px;
+  
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+@media screen and (max-width:1360px) {
+
+.card{
+ max-width: 38.33%;
+}
+}
+
+
+@media screen and (max-width:500px) {
+
+.card{
+ max-width: 100%;
+}
+}
+
+.cardd button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 35%;
+  font-size: 18px;
+  
+}
+
+.cardd button:hover {
+  opacity: 0.7;
+}
+@media screen and (max-width:1000px) {
+
+.cardd{
+ max-width:100%;
+}
+}
+@media screen and (max-width:600px) {
+
+.cardd{
+ max-width: 100%;
+}
+}
+.cardd {
+  box-shadow: 10px 15px 10px 12px rgba(0, 0, 0, 0.1);
+  max-width: 22.33%;
+  float:left;
+  margin: 15px;
+  text-align: center;
+  font-family: arial;
+  margin-top:50px;	
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+@media screen and (max-width:1000px) {
+.cardd{display: none}
+}
+
+
+header {
+ 
+    background: black;
+    overflow: hidden;
+	
+}
+.button2 {
+  border: none;
+  outline: 0;
+  padding: 52px;
+  color: transparent;
+  background-color:transparent;
+ text-align:left;
+  cursor: pointer;
+  width: 35%;
+  font-size: 18px;
+  
+}
+a.button3{
+display:inline-block;
+padding:0.75em 1.6em;
+border:0.1em solid #999999;
+margin:0 0.3em 0.3em 0;
+border-radius:0.12em;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:300;
+color:#999999;
+text-align:center;
+transition: all 0.2s;
+margin-top:50px;
+}
+a.button3:hover{
+color:white;
+background-color:#999999;
+}
+blockquote{
+  font-size: 30px;
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: .5em 10px;
+  padding: 0 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  padding: 10px 20px;
+  line-height: 1.4;
+}
+
+.ceo{width:40%;border-bottom:0px solid black;float:left;height:390px;text-align:center;padding-top:50px}
+.ceosays{width:59%;border-bottom:0px solid black;float:left;height:390px;text-align:center;padding-top:50px;text-align:center;}
+.ftake{font-family:Papyrus;font-size:20px;COLOR: #0087ca}
+.sus{border:0px solid pink	;width:50%;height:453px;float:left;text-align:center;padding-top:25px;font-family:Garamond;margin-top:30px;font-size:20px;background-color:pink;color:black}
+.susimg{border:0px solid pink;width:50%;height:479px;float:left;margin-top:30px;}
+
+@media screen and (max-width:800px) {
+.ceo{width:100%;border-bottom:none}
+.ceosays{width:100%};
+}
+
+.ceoname{text-align:center;padding-top:30px; line-height: 4.8;}
+
+@media screen and (max-width:500px) {	
+.ceoname{display:none}
+.ftake{display:none}}
+
+@media screen and (max-width:1150px) {
+
+.sus{width:100%}
+.susimg{width:100%}
+
+}
+.auimg{border:2px solid transparent;width:60%;float:left;height:600px;margin-top:50px;text-align:center}
+.au{border:2px solid transparent;width:39%;float:left;height:650px;margin-top:50px;text-align:center;padding-top:30px;font-family:Garamond;font-size:18px;  text-align-last: left;}
+@media screen and (max-width:1100px) {
+.auimg{width:100%}
+.au{width:100%;text-align:center; text-align-last:center;}
+
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="head" >
+<a href="#" class="fa fa-envelope" style="font-size:14px;color:grey;float:right;padding:8px;margin-right:9px;text-decoration:none" >&nbsp; ganorkarashish79@gmail.com</a>
+
+<a href="#" class="fa fa-whatsapp" style="font-size:14px;color:grey;float:right;padding:8px;margin-right:9px;text-decoration:none" >&nbsp; +91 9860833746</a>
+
+</div >
+
+
+<div class="topnav" id="myTopnav">
+<img src="log.jpeg" class="responsive" width="200" height="100">
+ 
+
+  <a href="#">Contact</a>
+  <a href="#">Aboutus</a> 
+  <a href="#">Sustanability</a>
+  <a href="#">Market</a>
+  <a href="products.html">Product</a>
+  <a href="#" class="active">Home</a>
+
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<header>
+<div class="containerr">
+<img src="rdyes.jpg"  alt="Nature" class="responsive1" width="600" height="700">
+  <div class="centered"><h3 style="font-size:1.6vw;  font-family: Garamond; ">COME, EXPERIENCE THE WORLD OF ONE OF THE TOP REACTIVE DYE MANUFACTURERS IN THE WORLD.</h3>
+  <p style="font-size:1vw;">WADEBABA Industries is one of the world’s top Reactive Dye producers, with presence in over 40 countries and annual revenues exceeding USD 200 Million. We are also proud to be India’s leading producer of reactive dyes while manufacturing over 15% of the nation’s total production. The group’s business ranges from dyes and dye intermediates to forays in digital textile printing ink, construction chemicals, textile auxiliaries and garment manufacturing.
+<br><br><br><a href="something" class="button1">About us</a>
+
+</div>	
+</div></header>
+<h1 style=" font-family: Papyrus;text-align:center">some of our products </h1>
+<div class="card" style="padding:10px;border-radius: 3%; ">
+  <img src="pro1.webp" alt="Denim Jeans" style="width:90%;height:250px;border-radius: 3%";class="responsive">
+  <h1>
+BioLoops </h1>
+  <p class="price">$19.99</p>
+  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+
+ 
+<!-- <p><button>Add to Cart</button></p> -->
+</div>
+<div class="card" style="padding:10px;border-radius: 3%; ">
+  <img src="pro2.webp" alt="Denim Jeans" style="width:90%;height:250px;border-radius: 3%;"class="responsive">
+  <h1>Anionics </h1>
+  <p class="price">$19.99</p>
+  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+
+ 
+<!-- <p><button>Add to Cart</button></p> -->
+</div>
+
+<div class="card" style="padding:10px; border-radius: 3%;">
+  <img src="pro3.webp" alt="Denim Jeans" style="width:90%;height:250px;border-radius: 3%;"class="responsive">
+  <h1>Nonionics </h1>
+  <p class="price">$19.99</p>
+  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+
+ 
+<!-- <p><button>Add to Cart</button></p> -->
+</div>
+<div class="card" style="padding:10px; border-radius: 3%;">
+  <img src="pro4.webp" alt="Denim Jeans" style="width:90%;height:250px;border-radius: 3%;"class="responsive">
+  <h1>Amphoteric
+ </h1>
+  <p class="price">$19.99</p>
+  <p>For many years we have been explosources have been around for many years but the majority have very limited functionality in </p>
+
+ 
+<!-- <p><button>Add to Cart</button></p> -->
+</div>
+<!-- 
+ <div class="cardd">
+  <img src="jeans3.jpg" alt="Denim Jeans" style="width:90%;height:250px;border-radius: 3%;"class="responsive">
+  <h1>Tailored </h1>
+  <p class="price">$19.99</p>
+  <p>Some text about the . Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+
+</div>
+
+<div class="cardd">
+  <img src="jeans3.jpg" alt="Denim Jeans" style="width:90%;height:250px;border-radius: 3%;"class="responsive">
+  <h1>Tailored </h1>
+  <p class="price">$19.99</p>
+  <p>Some text about the . Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+
+</div>
+
+<div class="cardd">
+  <img src="jeans3.jpg" alt="Denim Jeans" style="width:90%;height:250px;border-radius: 3%;"class="responsive">
+  <h1>Tailored </h1>
+  <p class="price">$19.99</p>
+  <p>Some text about the . Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+
+</div>
+
+<div class="cardd">
+  <img src="jeans3.jpg" alt="Denim Jeans" style="width:90%;height:250px;border-radius: 3%;"class="responsive">
+  <h1>Tailored </h1>
+  <p class="price">$19.99</p>
+  <p>Some text about the . Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+
+</div>
+
+<div style="border:0px solid transparent;text-align:center"><a href="something" class="button2">more products</a>-->
+</div>
+<div style="border:0px solid transparent;text-align:center;padding-top:50px;"><a href="something" class="button3">more products</a>
+<br>
+<br>
+<br>
+<br>
+<hr></div>
+<div class="ceo">
+<img src="ceo.jpg" class="responsive" width="300" height="200"  style="border-radius: 53%;"><h1 style="text-align:center;font-family:Papyrus; ">CEO	/Founder</h1> 
+</span>
+
+</div>
+<div class="ceosays">
+
+ <h5 class="ftake" > FOUNDER'S TAKE</H5>
+ <h5 style="font-family:Papyrus;font-size:20px;"> <span style="font-size:50px;">"</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+<br><span class="ceoname";> - Ashish Ganorkar(founder)
+</span>
+
+
+</div>
+
+<div class="sus">
+<h1>sustainability</h1>
+We see chemistry as a means of solving some of the most<br> pressing societal challenges of our time.<br> Guided by our support of the United Nations Sustainable Development <br>Goals and coupled with care for our neighbors, we create products<br> and innovations to help meet the world’s growing demands for <br>food, water, energy and opportunity. Learn about our journey to become a<br> more sustainable business.
+
+<br>
+<br>
+<a href="something" class="button1">Read more </a>
+
+
+</div>
+<div class="susimg" ><img src="sus.jfif" height="478px"; width="100%"></div>
+
+
+
+<div class="auimg" >
+
+<img src="ab1.webp" style="padding-top:10px" height="180px"><br>
+<img src="ab2.webp" style="padding-top:10px" height="180px"><br>
+<img src="ab3.webp" style="padding-top:10px" height="180px">
+
+</div>
+<div class="au">
+
+
+<h1>About us</h1>
+<p>
+Our company strength is our chemistry and market knowledge <br>
+of surfactants in particular for applications that fall within <br>
+the industrial markets. The coatings industry is an important<br>
+ market for Lankem and falls within two main areas; coating additives,<br>
+ which include dispersing agents, defoamers and humectants, and
+<br> emulsifiers used for emulsion polymerisation. With many years
+<br> of research and development, we have products that perform to <br>
+the absolute highest standards.
+
+<br>
+<br>
+Our company philosophy is to continue to develop new and<br>
+ interesting products to help the formulator bridge the demands<br> 
+ of modern requirements.
+
+ <br><br>
+
+
+ 
+<a href="something" class="button3">Know more </a>
+
+
+</div>
+
+<br>
+<div style="border-bottom:14px solid #575757;width:99.88%;height:300px;float:left;text-align:center;background-color:#8f8f8f;padding-top:30px">
+<img src="log2.jpeg" width="120px" style="border-radius: 53%;">
+
+<h1 style="color:white;text-align:center;font-family:Garamond ">wadebaba industries pvt.ltd.
+<h1 style="color:white;font-size:12px;">Market Data copyright © 2022 QuoteMedia. Data delayed 15 minutes unless otherwise indicated (view delay times for all exchanges).<br> RT=Real-Time, EOD=End of Day, PD=Previous Day. Market Data powered by QuoteMedia. Terms of Use.
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
